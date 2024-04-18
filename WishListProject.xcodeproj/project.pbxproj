@@ -15,6 +15,7 @@
 		782021272BD0F40E00EC8572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782021262BD0F40E00EC8572 /* Assets.xcassets */; };
 		7820212A2BD0F40E00EC8572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782021282BD0F40E00EC8572 /* LaunchScreen.storyboard */; };
 		782021322BD10D4F00EC8572 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 782021312BD10D4F00EC8572 /* .gitignore */; };
+		782021362BD111A900EC8572 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782021352BD111A900EC8572 /* WishListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		782021292BD0F40E00EC8572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7820212B2BD0F40E00EC8572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782021312BD10D4F00EC8572 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		782021352BD111A900EC8572 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,6 @@
 		7820210E2BD0F40D00EC8572 = {
 			isa = PBXGroup;
 			children = (
-				782021312BD10D4F00EC8572 /* .gitignore */,
 				782021192BD0F40D00EC8572 /* WishListProject */,
 				782021182BD0F40D00EC8572 /* Products */,
 			);
@@ -64,11 +65,13 @@
 				7820211A2BD0F40D00EC8572 /* AppDelegate.swift */,
 				7820211C2BD0F40D00EC8572 /* SceneDelegate.swift */,
 				7820211E2BD0F40D00EC8572 /* ViewController.swift */,
+				782021352BD111A900EC8572 /* WishListViewController.swift */,
 				782021202BD0F40D00EC8572 /* Main.storyboard */,
 				782021262BD0F40E00EC8572 /* Assets.xcassets */,
 				782021282BD0F40E00EC8572 /* LaunchScreen.storyboard */,
 				7820212B2BD0F40E00EC8572 /* Info.plist */,
 				782021232BD0F40D00EC8572 /* WishListProject.xcdatamodeld */,
+				782021312BD10D4F00EC8572 /* .gitignore */,
 			);
 			path = WishListProject;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7820211F2BD0F40D00EC8572 /* ViewController.swift in Sources */,
+				782021362BD111A900EC8572 /* WishListViewController.swift in Sources */,
 				7820211B2BD0F40D00EC8572 /* AppDelegate.swift in Sources */,
 				782021252BD0F40D00EC8572 /* WishListProject.xcdatamodeld in Sources */,
 				7820211D2BD0F40D00EC8572 /* SceneDelegate.swift in Sources */,
