@@ -6,24 +6,49 @@
 //
 
 import UIKit
+import CoreData
 
-class WishListViewController: UIViewController {
+class WishListViewController: UITableViewController {
+    
+    var persistentContainer: NSPersistentContainer? {
+        (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+    }
+    
+    private var productList: [Product] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
+        setProductList()
+    }
 
-        // Do any additional setup after loading the view.
+    // CoreData에서 상품 정보를 불러와, productList 변수에 저장합니다.
+    private func setProductList() {
+        guard let context = self.persistentContainer?.viewContext else { return }
+    
+        let request = Product.fetchRequest()
+    
+        if let productList = try? context.fetch(request) {
+            self.productList = productList
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // productList의 count를 반환합니다.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.productList.count
     }
-    */
-
+    
+    // 각 index별 tableView cell을 반환합니다.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let product = self.productList[indexPath.row]
+        
+        let id = product.id
+        let title = product.title ?? ""
+        let price = product.price
+        
+        cell.textLabel?.text = "[\(id)] \(title) - \(price)$"
+        return cell
+    }
 }
