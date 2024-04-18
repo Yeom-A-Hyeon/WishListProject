@@ -80,11 +80,14 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="tappedPresentWishList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNV-id-Plw"/>
+                                    <segue destination="Omk-H6-jbu" kind="show" identifier="ShowWishList" id="Sg6-Is-2Om"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SyH-vb-s5z">
                                 <rect key="frame" x="0.0" y="59" width="393" height="438"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="438" id="o8Y-9a-NHN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,14 +97,15 @@
                             <constraint firstItem="SyH-vb-s5z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7pu-GR-Mft"/>
                             <constraint firstItem="P4D-oG-BLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BSU-jI-NcG"/>
                             <constraint firstItem="HFB-K9-twW" firstAttribute="top" secondItem="SyH-vb-s5z" secondAttribute="bottom" constant="8" id="GKE-yH-NHv"/>
+                            <constraint firstItem="P4D-oG-BLB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="725.66999999999996" id="LpV-1f-RW4"/>
                             <constraint firstAttribute="bottom" secondItem="jcl-0d-Ysg" secondAttribute="bottom" constant="50" id="NMI-mr-Xlq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P4D-oG-BLB" secondAttribute="trailing" constant="10" id="RGQ-3n-sYO"/>
                             <constraint firstItem="jcl-0d-Ysg" firstAttribute="top" secondItem="P4D-oG-BLB" secondAttribute="bottom" constant="7.6699999999999999" id="UdR-YX-uKW"/>
+                            <constraint firstItem="jcl-0d-Ysg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="767.66999999999996" id="c09-HG-nX1"/>
                             <constraint firstItem="jcl-0d-Ysg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="doO-sO-3wD"/>
                             <constraint firstAttribute="trailing" secondItem="jcl-0d-Ysg" secondAttribute="trailing" constant="10" id="eEa-jl-kIj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HFB-K9-twW" secondAttribute="trailing" constant="10" id="eKr-RA-fLH"/>
                             <constraint firstItem="HFB-K9-twW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="n7E-Ji-zrA"/>
-                            <constraint firstItem="P4D-oG-BLB" firstAttribute="top" secondItem="HFB-K9-twW" secondAttribute="bottom" constant="150" id="tqR-PX-FvL"/>
                             <constraint firstAttribute="trailing" secondItem="SyH-vb-s5z" secondAttribute="trailing" id="wFg-Uk-4S1"/>
                         </constraints>
                     </view>
@@ -121,14 +125,14 @@
             <objects>
                 <viewController storyboardIdentifier="WishListViewController" id="Omk-H6-jbu" customClass="WishListViewController" customModule="WishListProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dy3-r2-mMm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EuP-9b-3DP">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0WR-N5-42B">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0WR-N5-42B">
                                         <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0WR-N5-42B" id="tV8-1j-azA">
@@ -148,6 +152,10 @@
                             <constraint firstItem="EuP-9b-3DP" firstAttribute="top" secondItem="Dy3-r2-mMm" secondAttribute="top" id="mer-pI-Bw8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EOt-QP-NtX"/>
+                    <connections>
+                        <outlet property="tableView" destination="EuP-9b-3DP" id="TYn-ko-4wi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdr-aH-txA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

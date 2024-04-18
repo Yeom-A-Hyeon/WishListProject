@@ -8,12 +8,13 @@
 import UIKit
 import CoreData
 
-class WishListViewController: UITableViewController {
+class WishListViewController: UIViewController {
     
     var persistentContainer: NSPersistentContainer? {
         (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     }
     
+    @IBOutlet weak var tableView: UITableView!
     private var productList: [Product] = []
 
     override func viewDidLoad() {
@@ -34,21 +35,25 @@ class WishListViewController: UITableViewController {
     }
     
     // productList의 count를 반환합니다.
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+extension WishListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.productList.count
     }
     
-    // 각 index별 tableView cell을 반환합니다.
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let product = self.productList[indexPath.row]
+                let product = self.productList[indexPath.row]
         
-        let id = product.id
-        let title = product.title ?? ""
-        let price = product.price
+                let id = product.id
+                let title = product.title ?? ""
+                let price = product.price
         
-        cell.textLabel?.text = "[\(id)] \(title) - \(price)$"
-        return cell
+                cell.textLabel?.text = "[\(id)] \(title) - \(price)$"
+                return cell
     }
+    
+    
 }

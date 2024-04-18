@@ -59,16 +59,16 @@ class ViewController: UIViewController {
     }
     
     // 위시 리스트 보기 버튼 클릭 시 호출되는 IBAction
-    @IBAction func tappedPresentWishList(_ sender: UIButton) {
-        // WishListViewController를 가져옵니다.
-        guard let nextVC = self.storyboard?
-            .instantiateViewController(
-                identifier: "WishListViewController"
-            ) as? WishListViewController else { return }
-        
-        // WishListViewController를 present 합니다.
-        self.present(nextVC, animated: true)
-    }
+//    @IBAction func tappedPresentWishList(_ sender: UIButton) {
+//        // WishListViewController를 가져옵니다.
+//        guard let nextVC = self.storyboard?
+//            .instantiateViewController(
+//                identifier: "WishListViewController"
+//            ) as? WishListViewController else { return }
+//        
+//        // WishListViewController를 present 합니다.
+//        self.present(nextVC, animated: true)
+//    }
     
     // URLSession을 통해 RemoteProduct를 가져와 currentProduct 변수에 저장합니다.
     private func fetchRemoteProduct() {
