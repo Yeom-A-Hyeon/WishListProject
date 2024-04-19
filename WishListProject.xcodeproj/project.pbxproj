@@ -48,6 +48,7 @@
 		7820210E2BD0F40D00EC8572 = {
 			isa = PBXGroup;
 			children = (
+				782021312BD10D4F00EC8572 /* .gitignore */,
 				782021192BD0F40D00EC8572 /* WishListProject */,
 				782021182BD0F40D00EC8572 /* Products */,
 			);
@@ -74,7 +75,6 @@
 				782021282BD0F40E00EC8572 /* LaunchScreen.storyboard */,
 				7820212B2BD0F40E00EC8572 /* Info.plist */,
 				782021232BD0F40D00EC8572 /* WishListProject.xcdatamodeld */,
-				782021312BD10D4F00EC8572 /* .gitignore */,
 			);
 			path = WishListProject;
 			sourceTree = "<group>";
