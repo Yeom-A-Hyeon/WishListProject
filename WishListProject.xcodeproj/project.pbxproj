@@ -16,6 +16,7 @@
 		7820212A2BD0F40E00EC8572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782021282BD0F40E00EC8572 /* LaunchScreen.storyboard */; };
 		782021322BD10D4F00EC8572 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 782021312BD10D4F00EC8572 /* .gitignore */; };
 		782021362BD111A900EC8572 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782021352BD111A900EC8572 /* WishListViewController.swift */; };
+		782021382BD23A0900EC8572 /* RemotePorduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782021372BD23A0900EC8572 /* RemotePorduct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7820212B2BD0F40E00EC8572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782021312BD10D4F00EC8572 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		782021352BD111A900EC8572 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		782021372BD23A0900EC8572 /* RemotePorduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePorduct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				7820211A2BD0F40D00EC8572 /* AppDelegate.swift */,
 				7820211C2BD0F40D00EC8572 /* SceneDelegate.swift */,
 				7820211E2BD0F40D00EC8572 /* ViewController.swift */,
+				782021372BD23A0900EC8572 /* RemotePorduct.swift */,
 				782021352BD111A900EC8572 /* WishListViewController.swift */,
 				782021202BD0F40D00EC8572 /* Main.storyboard */,
 				782021262BD0F40E00EC8572 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				7820211B2BD0F40D00EC8572 /* AppDelegate.swift in Sources */,
 				782021252BD0F40D00EC8572 /* WishListProject.xcdatamodeld in Sources */,
 				7820211D2BD0F40D00EC8572 /* SceneDelegate.swift in Sources */,
+				782021382BD23A0900EC8572 /* RemotePorduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
